@@ -1,0 +1,591 @@
+/* ============================================================
+   RUI CONECTI — style.css
+   Base: variáveis de design, reset, tipografia, layout geral
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+  /* ---- Cores — Identidade Azul (extraídas da logo Rui Conecti) ---- */
+  --ink:            #0B2545;   /* texto principal, quase-marinho */
+  --blue-deep:       #003A87;  /* cabeçalho, rodapé, superfícies escuras (da logo) */
+  --blue-primary:    #004AAD;  /* azul royal da logo — botões, links, ações principais */
+  --blue-primary-hover: #003880;
+  --blue-teal:       #0CC0DF; /* teal vibrante da logo — usado com moderação, hover/destaques */
+  --blue-soft:       #B9E4F7; /* azul claro da logo — bordas, divisores, cards suaves */
+  --blue-bg:         #EAF7FC; /* fundo geral — azul muito claro, com leve nuance de teal */
+  --blue-bg-alt:     #F5FBFE;  /* fundo alternado de seções */
+  --white:           #FFFFFF;
+
+  /* ---- Cor de destaque (assinatura: preenchimento de bolha) ---- */
+  --accent-fill:     #F5A623;  /* âmbar — usado com moderação */
+
+  /* ---- Semânticas ---- */
+  --success:         #16A34A;
+  --success-bg:      #E7F7ED;
+  --error:            #DC2626;
+  --error-bg:         #FDEAEA;
+
+  /* ---- Tipografia ---- */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  /* ---- Espaçamento ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 6rem;
+
+  /* ---- Layout ---- */
+  --container-width: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card: 0 4px 18px rgba(15, 46, 112, 0.08);
+  --shadow-elevated: 0 12px 32px rgba(15, 46, 112, 0.14);
+
+  --header-height: 66px;
+}
+
+/* ---- Reset básico ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--blue-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+p { margin: 0 0 var(--space-md); color: #33476B; }
+
+.mono { font-family: var(--font-mono); }
+
+/* ---- Foco visível (acessibilidade) ---- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent-fill);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ---- Skip link (acessibilidade) ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--blue-primary);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 0;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* ============================================================
+   BARRA SUPERIOR (detalhe de marca, inspirado no Ferretto)
+   ============================================================ */
+.top-bar {
+  height: 3px;
+  background: var(--ink);
+  width: 100%;
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--white);
+  border-bottom: 1px solid var(--blue-soft);
+}
+
+.site-header .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; }
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+.brand-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8CA3D1;
+  font-weight: 600;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.brand-dot {
+  color: var(--blue-teal);
+}
+
+/* ---- Navegação principal: ícone em cima, texto embaixo (padrão de referência) ---- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: #4A5C7E;
+  font-weight: 500;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.main-nav a svg { width: 19px; height: 19px; color: #4A5C7E; flex-shrink: 0; }
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--blue-primary);
+  border-bottom-color: var(--blue-primary);
+}
+.main-nav a:hover svg,
+.main-nav a[aria-current="page"] svg { color: var(--blue-primary); }
+
+/* ---- Ações à direita: busca, usuário, menu "···", hambúrguer ---- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #4A5C7E;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s ease;
+}
+.icon-btn:hover { background: var(--blue-bg); }
+.icon-btn svg { width: 18px; height: 18px; }
+
+/* ---- Avatar do usuário (inicial + seta) ---- */
+.user-avatar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.3rem 0.2rem 0.2rem;
+  border-radius: 999px;
+  margin-left: 0.3rem;
+  transition: background 0.15s ease;
+}
+.user-avatar-btn:hover { background: var(--blue-bg); }
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.user-avatar-btn svg { width: 14px; height: 14px; color: #8CA3D1; }
+
+.overflow-wrap { position: relative; }
+
+.overflow-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevated);
+  min-width: 220px;
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+  z-index: 110;
+}
+.overflow-menu.is-open { display: flex; }
+
+.overflow-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.overflow-menu a:hover { background: var(--blue-bg); }
+.overflow-menu a svg { width: 16px; height: 16px; color: var(--blue-primary); }
+
+.overflow-menu .divider {
+  height: 1px;
+  background: var(--blue-bg);
+  margin: 0.35rem 0.25rem;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.nav-toggle svg { width: 26px; height: 26px; }
+
+/* ---- Gaveta de navegação mobile: escondida por padrão.
+   Só aparece (e vira posição fixa) na faixa mobile, em responsive.css. ---- */
+.mobile-drawer {
+  display: none;
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--blue-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-card);
+}
+.btn-primary:hover { background: var(--blue-primary-hover); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+}
+.btn-outline:hover { background: var(--blue-soft); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-ghost:hover { background: var(--blue-bg-alt); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  background: linear-gradient(180deg, var(--blue-bg) 0%, var(--blue-bg-alt) 100%);
+  overflow: hidden;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--blue-primary);
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 { margin-bottom: var(--space-sm); }
+.hero .lead {
+  font-size: 1.1rem;
+  color: #33476B;
+  max-width: 46ch;
+  margin-bottom: var(--space-lg);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+/* ============================================================
+   SEÇÕES / ATALHOS
+   ============================================================ */
+.section {
+  padding: var(--space-2xl) 0;
+}
+.section-alt { background: var(--white); }
+
+.section-heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-xl);
+}
+.section-heading p { color: #4A5C7E; }
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--blue-primary);
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+.card-icon svg { width: 20px; height: 20px; color: var(--blue-primary); }
+
+.card h3 { margin-bottom: 0.15rem; }
+.card p { font-size: 0.92rem; margin-bottom: 0.75rem; }
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--blue-primary);
+  margin-top: auto;
+}
+.card-cta svg { width: 15px; height: 15px; transition: transform 0.15s ease; }
+.card:hover .card-cta svg { transform: translateX(3px); }
+
+/* ---- Marcadores tipo "alternativa" (A) (B) (C)... ----
+   Ligados ao conteúdo real: o formato de alternativas do ENEM.
+   Usados quando a lista representa etapas reais, não decoração. */
+.alt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.alt-list li {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.alt-marker {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--blue-primary);
+  background: var(--white);
+}
+
+.alt-list li.is-done .alt-marker {
+  background: var(--blue-primary);
+  color: var(--white);
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+.site-footer {
+  background: var(--blue-deep);
+  color: #C9D8F5;
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-brand .brand { color: var(--white); }
+.footer-brand p { color: #9FB4DE; font-size: 0.9rem; max-width: 32ch; }
+
+.footer-col h4 {
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+.footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-col a { color: #C9D8F5; font-size: 0.92rem; }
+.footer-col a:hover { color: var(--white); }
+
+.footer-bottom {
+  padding-top: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+  color: #8CA3D1;
+}

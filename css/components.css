@@ -1,0 +1,707 @@
+/* ============================================================
+   RUI CONECTI — components.css
+   Componentes reutilizáveis em várias páginas
+   ============================================================ */
+
+/* ---- Marca d'água da logo (fixa, canto inferior esquerdo, só na home) ---- */
+.logo-watermark {
+  position: fixed;
+  left: -40px;
+  bottom: -40px;
+  width: 260px;
+  height: 260px;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo-watermark img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 640px) {
+  .logo-watermark { width: 160px; height: 160px; left: -30px; bottom: -30px; }
+}
+
+/* ---- Cartão-resposta (elemento de assinatura visual) ---- */
+.answer-sheet {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.answer-sheet .bubble {
+  fill: var(--white);
+  stroke: var(--blue-primary);
+  stroke-width: 2.5;
+}
+
+.answer-sheet .bubble-fill {
+  fill: var(--accent-fill);
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: bubble-pop 0.4s ease forwards;
+}
+
+@keyframes bubble-pop {
+  0%   { opacity: 0; transform: scale(0.3); }
+  70%  { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer-sheet .bubble-fill { animation: none; opacity: 1; transform: scale(1); }
+}
+
+/* ---- Badges de status ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+}
+.badge-success { background: var(--success-bg); color: var(--success); }
+.badge-error   { background: var(--error-bg); color: var(--error); }
+.badge-neutral { background: var(--blue-soft); color: var(--blue-deep); }
+.badge-facil   { background: var(--success-bg); color: var(--success); }
+.badge-medio   { background: #FFF4E0; color: #B4740E; }
+.badge-dificil { background: var(--error-bg); color: var(--error); }
+
+/* ---- Cartão de estatística (usado em Desempenho / Minha TRI) ---- */
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  color: #5A6D8F;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card .stat-value {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.stat-card .stat-value small {
+  font-size: 1rem;
+  color: #5A6D8F;
+  font-weight: 500;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+/* ---- Barra de progresso ---- */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  overflow: hidden;
+}
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--blue-primary);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.progress-bar.success > span { background: var(--success); }
+
+/* ---- Cartão de questão ---- */
+.question-card {
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.question-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.question-statement {
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: var(--space-lg);
+}
+
+.question-options {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.question-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  border: 2px solid var(--blue-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.question-option:hover { border-color: var(--blue-primary); }
+
+.question-option input[type="radio"] { display: none; }
+
+.question-option .alt-marker {
+  width: 30px;
+  height: 30px;
+  font-size: 0.85rem;
+}
+
+.question-option.is-selected {
+  border-color: var(--blue-primary);
+  background: var(--blue-bg-alt);
+}
+.question-option.is-selected .alt-marker {
+  background: var(--blue-primary);
+  color: var(--white);
+}
+
+.question-option.is-correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+.question-option.is-correct .alt-marker {
+  background: var(--success);
+  color: var(--white);
+  border-color: var(--success);
+}
+
+.question-option.is-wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+.question-option.is-wrong .alt-marker {
+  background: var(--error);
+  color: var(--white);
+  border-color: var(--error);
+}
+
+.question-explanation {
+  border-top: 1px dashed var(--blue-soft);
+  padding-top: var(--space-md);
+  margin-top: var(--space-md);
+  font-size: 0.95rem;
+  color: #33476B;
+}
+
+/* ---- Formulários ---- */
+.form-field {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid var(--blue-soft);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--blue-primary);
+  outline: none;
+}
+
+.form-hint { font-size: 0.8rem; color: #5A6D8F; }
+
+/* ---- Cronômetro (simulados) ---- */
+.timer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--blue-deep);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+.timer-pill.is-warning { background: var(--error); }
+
+/* ---- Alerta / aviso (ex: "estimativa, não é a nota oficial") ---- */
+.alert {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  background: #FFF4E0;
+  border: 1px solid #F0C878;
+  color: #7A5308;
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  font-size: 0.9rem;
+}
+.alert svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+
+/* ---- Tabela de provas anteriores ---- */
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--blue-soft);
+}
+.exam-table th, .exam-table td {
+  text-align: left;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--blue-soft);
+  font-size: 0.92rem;
+}
+.exam-table th {
+  background: var(--blue-bg-alt);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--blue-deep);
+}
+.exam-table tr:last-child td { border-bottom: none; }
+.exam-table a { font-weight: 600; }
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #5A6D8F;
+  margin-bottom: var(--space-lg);
+}
+.breadcrumb a { color: #5A6D8F; }
+.breadcrumb a:hover { color: var(--blue-primary); }
+
+/* ============================================================
+   PÁGINA "INFORMAÇÕES DO ENEM" — introdução + layout
+   ============================================================ */
+.page-intro {
+  padding: var(--space-xl) 0 var(--space-lg);
+  background: linear-gradient(180deg, var(--blue-bg) 0%, var(--blue-bg-alt) 100%);
+}
+.page-intro h1 { margin-bottom: var(--space-sm); }
+.page-intro .lead { max-width: 60ch; margin-bottom: 0; }
+.page-intro .hero-eyebrow { margin-bottom: var(--space-md); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.enem-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* ---- Acordeão ---- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.accordion-item {
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.accordion-item h3 { margin: 0; }
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--white);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.accordion-num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--blue-primary);
+  background: var(--blue-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.55rem;
+  flex-shrink: 0;
+}
+
+.accordion-title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.accordion-chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--blue-primary);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.accordion-trigger:hover { background: var(--blue-bg-alt); }
+.accordion-trigger[aria-expanded="true"] .accordion-chevron { transform: rotate(180deg); }
+.accordion-trigger[aria-expanded="true"] .accordion-title { color: var(--blue-primary); }
+
+.accordion-panel[hidden] { display: none; }
+
+.accordion-panel-inner {
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--blue-bg);
+  padding-top: var(--space-md);
+}
+.accordion-panel-inner h4 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  font-size: 1.05rem;
+}
+.accordion-panel-inner h4:first-child { margin-top: 0; }
+.accordion-panel-inner ul,
+.accordion-panel-inner ol {
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+  color: #33476B;
+}
+.accordion-panel-inner li { margin-bottom: 0.4rem; }
+.accordion-panel-inner .alt-list { padding-left: 0; }
+.accordion-panel-inner .alt-list p { margin-bottom: 0; }
+.accordion-panel-inner p:last-child { margin-bottom: 0; }
+
+.day-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.day-card { padding: var(--space-md); }
+.day-card .badge { margin-bottom: var(--space-sm); }
+.day-card ul { margin-bottom: 0; padding-left: 1.1rem; font-size: 0.92rem; }
+
+.enem-table { margin-bottom: var(--space-md); }
+
+/* ---- Barra lateral ---- */
+.enem-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.enem-sidebar-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+}
+
+.sidebar-dates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.sidebar-dates li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+  border-bottom: 1px dashed var(--blue-soft);
+  padding-bottom: 0.6rem;
+}
+.sidebar-dates li:last-child { border-bottom: none; padding-bottom: 0; }
+.sidebar-dates li span { color: #5A6D8F; }
+.sidebar-dates li strong { color: var(--ink); font-family: var(--font-mono); font-size: 0.82rem; text-align: right; }
+
+.sidebar-summary {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #33476B;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.sidebar-summary li { padding-left: 0.15rem; }
+
+.enem-sidebar-alert { font-size: 0.85rem; }
+
+/* ============================================================
+   PROVAS ANTIGAS PARA RESOLVER — cards de prova, cronômetro
+   interativo e tela de questão/resultado
+   ============================================================ */
+
+/* ---- Cards de prova (grade em provas.html) ---- */
+.exam-card {
+  background: var(--white);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.exam-card-year {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+}
+
+.exam-card-days {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.exam-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+}
+
+.exam-day-info { display: flex; flex-direction: column; gap: 0.1rem; }
+.exam-day-info strong { font-size: 0.92rem; color: var(--ink); }
+.exam-day-info span { font-size: 0.8rem; color: #5A6D8F; }
+
+.exam-day-actions { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+
+.exam-day-actions .btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--blue-soft);
+  color: var(--blue-primary);
+  flex-shrink: 0;
+}
+.icon-link:hover { background: var(--blue-bg-alt); }
+.icon-link svg { width: 16px; height: 16px; }
+
+.exam-badge-soon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8CA3D1;
+  background: var(--blue-bg);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* ---- Tela de início da prova ---- */
+.exam-start {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.exam-start .stat-card { text-align: left; margin: var(--space-lg) 0; }
+.exam-start-actions { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg); }
+
+/* ---- Barra de controle da prova (cronômetro + progresso) ---- */
+.exam-toolbar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 20;
+  background: var(--blue-bg);
+  border-bottom: 1px solid var(--blue-soft);
+  padding: 0.8rem 0;
+  margin-bottom: var(--space-lg);
+}
+.exam-toolbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.exam-progress-info {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.timer-controls { display: flex; align-items: center; gap: 0.5rem; }
+.timer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: none;
+  background: var(--blue-primary);
+  color: var(--white);
+  cursor: pointer;
+}
+.timer-btn:hover { background: var(--blue-primary-hover); }
+.timer-btn svg { width: 15px; height: 15px; }
+
+.exam-score-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--success-bg);
+  color: var(--success);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+}
+
+/* ---- Cartão da questão (imagem) ---- */
+.exam-question-image-wrap {
+  border: 1px solid var(--blue-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  background: var(--white);
+}
+.exam-question-image-wrap img { display: block; width: 100%; height: auto; }
+
+.exam-alt-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
+  margin-bottom: var(--space-lg);
+}
+
+.exam-alt-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  border: 2px solid var(--blue-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 0.5rem;
+  background: var(--white);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.exam-alt-btn:hover:not(:disabled) { border-color: var(--blue-primary); }
+.exam-alt-btn:disabled { cursor: default; }
+
+.exam-alt-btn .alt-marker { width: 32px; height: 32px; }
+
+.exam-alt-btn.is-correct { border-color: var(--success); background: var(--success-bg); }
+.exam-alt-btn.is-correct .alt-marker { background: var(--success); border-color: var(--success); color: var(--white); }
+
+.exam-alt-btn.is-wrong { border-color: var(--error); background: var(--error-bg); }
+.exam-alt-btn.is-wrong .alt-marker { background: var(--error); border-color: var(--error); color: var(--white); }
+
+.exam-alt-btn.is-dimmed { opacity: 0.55; }
+
+.exam-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-lg);
+}
+.exam-feedback.is-correct { background: var(--success-bg); color: var(--success); }
+.exam-feedback.is-wrong { background: var(--error-bg); color: var(--error); }
+.exam-feedback svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+.exam-nav-row { display: flex; justify-content: flex-end; }
+
+/* ---- Tela de resultado ---- */
+.exam-result { max-width: 640px; margin: 0 auto; text-align: center; }
+.exam-result-score {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  margin: var(--space-md) 0 0;
+}
+.exam-result-score small { font-size: 1.4rem; color: #5A6D8F; font-weight: 500; }
+.exam-result-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); margin: var(--space-lg) 0; }
+.exam-result-actions { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .exam-alt-grid { grid-template-columns: repeat(5, 1fr); gap: 0.35rem; }
+  .exam-alt-btn { padding: 0.6rem 0.2rem; }
+  .exam-result-stats { grid-template-columns: 1fr; }
+  .exam-toolbar { top: 0; }
+}
+
+.exam-grid-cards { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1024px) { .exam-grid-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .exam-grid-cards { grid-template-columns: 1fr; }
+  .exam-day-row { flex-wrap: wrap; }
+  .exam-day-actions { width: 100%; }
+  .exam-day-actions .btn { flex: 1; text-align: center; }
+}

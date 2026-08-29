@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prova — Rui Conecti</title>
+  <meta name="description" content="Resolva provas antigas do ENEM, questão por questão, com cronômetro e correção na hora.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="../index.html" class="brand" aria-label="Rui Conecti — página inicial">
+        <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+        <span class="brand-text">
+          <span class="brand-eyebrow">Preparação ENEM</span>
+          <span class="brand-name">Rui Conecti<span class="brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="enem.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>
+            Informações do ENEM
+          </a></li>
+          <li><a href="questoes.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Banco de Questões
+          </a></li>
+          <li><a href="provas.html" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            Provas Antigas para Resolver
+          </a></li>
+          <li><a href="tri.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>
+            TRI
+          </a></li>
+          <li><a href="sobre.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Sobre Nós
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="overflow-wrap">
+          <button class="icon-btn" id="overflow-toggle" aria-label="Mais opções" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <div class="overflow-menu" id="overflow-menu">
+            <a href="estudos.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+              Plano de Estudos
+            </a>
+            <a href="forum.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>
+              Fórum
+            </a>
+            <div class="divider"></div>
+            <a href="perfil.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              Meu Perfil
+            </a>
+          </div>
+        </div>
+
+        <button class="icon-btn desktop-only" aria-label="Buscar no site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="login.html" class="user-avatar-btn desktop-only" aria-label="Entrar ou criar conta">
+          <span class="user-avatar">R</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Navegação mobile">
+      <ul>
+        <li><a href="enem.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>Informações do ENEM</a></li>
+        <li><a href="questoes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Banco de Questões</a></li>
+        <li><a href="provas.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>Provas Antigas para Resolver</a></li>
+        <li><a href="tri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>TRI</a></li>
+        <li><a href="sobre.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Sobre Nós</a></li>
+      </ul>
+      <p class="drawer-label">Mais</p>
+      <ul>
+        <li><a href="estudos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Plano de Estudos</a></li>
+        <li><a href="forum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>Fórum</a></li>
+        <li><a href="perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Meu Perfil</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-primary">Entrar / Criar conta</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== TELA DE INÍCIO ===================== -->
+    <section class="section" id="exam-start">
+      <div class="container exam-start">
+        <p class="breadcrumb"><a href="../index.html">Início</a> / <a href="provas.html">Provas Antigas para Resolver</a> / Prova</p>
+        <span class="hero-eyebrow">MODO PROVA</span>
+        <h1 id="exam-start-title">Carregando...</h1>
+        <p class="lead" id="exam-start-areas"></p>
+
+        <div class="stat-card">
+          <ul class="sidebar-summary">
+            <li><strong id="exam-start-total"></strong> — uma questão por vez, com alternativas.</li>
+            <li>O cronômetro conta o tempo total; você pode <strong>pausar e continuar</strong> quando quiser.</li>
+            <li>Ao responder, a alternativa certa fica <strong>verde</strong> e a errada (se for o caso) fica <strong>vermelha</strong>.</li>
+            <li>No final, você vê sua pontuação e o tempo total.</li>
+          </ul>
+        </div>
+
+        <div class="exam-start-actions">
+          <button type="button" class="btn btn-primary" id="exam-start-btn">Começar prova</button>
+          <a href="#" id="exam-start-pdf" class="btn btn-outline" target="_blank" rel="noopener">Baixar PDF da prova</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TELA DA PROVA (QUESTÃO POR VEZ) ===================== -->
+    <section id="exam-quiz" hidden>
+
+      <div class="exam-toolbar">
+        <div class="container">
+          <span class="exam-progress-info" id="exam-progress-info">Questão 1 de 90</span>
+
+          <div class="timer-controls">
+            <button type="button" class="timer-btn" id="exam-timer-toggle" aria-label="Pausar cronômetro">
+              <svg id="exam-timer-pause-icon" viewBox="0 0 24 24" fill="currentColor" hidden><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              <svg id="exam-timer-play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <span class="timer-pill" id="exam-timer-display">00:00</span>
+          </div>
+
+          <span class="exam-score-pill" id="exam-score-pill">0 / 90 pontos</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="question-card" style="max-width:760px;margin:0 auto;">
+          <div class="exam-question-image-wrap">
+            <img id="exam-question-image" src="" alt="Questão">
+          </div>
+
+          <div class="exam-alt-grid" id="exam-alt-grid"></div>
+
+          <div class="exam-feedback" id="exam-feedback" hidden></div>
+
+          <div class="exam-nav-row">
+            <button type="button" class="btn btn-primary" id="exam-next-btn" hidden>Próxima questão</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TELA DE RESULTADO ===================== -->
+    <section class="section" id="exam-result" hidden>
+      <div class="container exam-result">
+        <span class="hero-eyebrow">PROVA FINALIZADA</span>
+        <h1>Resultado</h1>
+        <p class="exam-result-score" id="exam-result-score-value">0<small> / 90</small></p>
+
+        <div class="exam-result-stats">
+          <div class="stat-card">
+            <span class="stat-label">Tempo total</span>
+            <span class="stat-value" id="exam-result-time" style="font-size:1.3rem;">00:00</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Acertos</span>
+            <span class="stat-value" id="exam-result-correct" style="font-size:1.3rem;color:var(--success);">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Erros</span>
+            <span class="stat-value" id="exam-result-wrong" style="font-size:1.3rem;color:var(--error);">0</span>
+          </div>
+        </div>
+
+        <div class="exam-result-actions">
+          <a href="provas.html" class="btn btn-primary">Voltar para Provas Antigas</a>
+          <a href="#" id="exam-result-pdf" class="btn btn-outline" target="_blank" rel="noopener">Baixar PDF da prova</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" style="color:var(--white)">
+            <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+            <span class="brand-text">
+              <span class="brand-eyebrow" style="color:#7E97C9">Preparação ENEM</span>
+              <span class="brand-name" style="color:var(--white)">Rui Conecti<span class="brand-dot">.</span></span>
+            </span>
+          </a>
+          <p>Plataforma educacional brasileira de apoio à preparação para o ENEM.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Estudar</h4>
+          <ul>
+            <li><a href="enem.html">Sobre o ENEM</a></li>
+            <li><a href="questoes.html">Banco de Questões</a></li>
+            <li><a href="provas.html">Provas Antigas para Resolver</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acompanhar</h4>
+          <ul>
+            <li><a href="tri.html">Minha TRI</a></li>
+            <li><a href="estudos.html">Plano de Estudos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Entrar / Criar conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rui Conecti. Plataforma educacional independente, sem vínculo oficial com o INEP.</span>
+        <span>Feito para estudantes brasileiros.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Carrega o arquivo de dados da prova certa, conforme ?id= na URL
+    // (ex.: prova.html?id=2015-d1 carrega js/data/2015-d1.js)
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || '2015-d1';
+      const script = document.createElement('script');
+      script.src = '../js/data/' + id + '.js';
+      script.onload = function () {
+        const engine = document.createElement('script');
+        engine.src = '../js/exam.js';
+        document.body.appendChild(engine);
+      };
+      script.onerror = function () {
+        document.getElementById('exam-start-title').textContent = 'Prova não encontrada';
+        document.getElementById('exam-start-areas').textContent = 'Não foi possível carregar essa prova. Volte para a lista de provas antigas.';
+      };
+      document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provas Antigas para Resolver — Rui Conecti</title>
+  <meta name="description" content="Resolva provas antigas do ENEM (2015 a 2025), questão por questão, com cronômetro e correção na hora. Baixe também o PDF original de cada prova.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="../index.html" class="brand" aria-label="Rui Conecti — página inicial">
+        <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+        <span class="brand-text">
+          <span class="brand-eyebrow">Preparação ENEM</span>
+          <span class="brand-name">Rui Conecti<span class="brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="enem.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>
+            Informações do ENEM
+          </a></li>
+          <li><a href="questoes.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Banco de Questões
+          </a></li>
+          <li><a href="provas.html" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            Provas Antigas para Resolver
+          </a></li>
+          <li><a href="tri.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>
+            TRI
+          </a></li>
+          <li><a href="sobre.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Sobre Nós
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="overflow-wrap">
+          <button class="icon-btn" id="overflow-toggle" aria-label="Mais opções" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <div class="overflow-menu" id="overflow-menu">
+            <a href="estudos.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+              Plano de Estudos
+            </a>
+            <a href="forum.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>
+              Fórum
+            </a>
+            <div class="divider"></div>
+            <a href="perfil.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              Meu Perfil
+            </a>
+          </div>
+        </div>
+
+        <button class="icon-btn desktop-only" aria-label="Buscar no site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="login.html" class="user-avatar-btn desktop-only" aria-label="Entrar ou criar conta">
+          <span class="user-avatar">R</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Navegação mobile">
+      <ul>
+        <li><a href="enem.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>Informações do ENEM</a></li>
+        <li><a href="questoes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Banco de Questões</a></li>
+        <li><a href="provas.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>Provas Antigas para Resolver</a></li>
+        <li><a href="tri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>TRI</a></li>
+        <li><a href="sobre.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Sobre Nós</a></li>
+      </ul>
+      <p class="drawer-label">Mais</p>
+      <ul>
+        <li><a href="estudos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Plano de Estudos</a></li>
+        <li><a href="forum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>Fórum</a></li>
+        <li><a href="perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Meu Perfil</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-primary">Entrar / Criar conta</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== INTRODUÇÃO DA PÁGINA ===================== -->
+    <section class="page-intro">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Início</a> / Provas Antigas para Resolver</p>
+        <span class="hero-eyebrow">TREINE COM PROVAS REAIS</span>
+        <h1>Provas Antigas para Resolver</h1>
+        <p class="lead">
+          Resolva provas antigas do Enem, questão por questão, com cronômetro e correção na hora
+          (verde quando acerta, vermelho quando erra). O PDF original de cada prova também fica
+          disponível para download.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== GRADE DE PROVAS ===================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="grid-cards exam-grid-cards">
+
+          <!-- ENEM 2015 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2015</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Ciências Humanas e Ciências da Natureza — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2015-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2015/enem-2015-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Linguagens e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2015-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2015/enem-2015-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2016 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2016</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Ciências Humanas e Ciências da Natureza — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2016-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2016/enem-2016-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Linguagens e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2016-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2016/enem-2016-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2017 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2017</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2017-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2017/enem-2017-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2017-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2017/enem-2017-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2018 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2018</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2018-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2018/enem-2018-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2018-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2018/enem-2018-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2019 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2019</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2019-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2019/enem-2019-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2019-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2019/enem-2019-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2021 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2021</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2021-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2021/enem-2021-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2021-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2021/enem-2021-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2022 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2022</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2022-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2022/enem-2022-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2022-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2022/enem-2022-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2024 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2024</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2024-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2024/enem-2024-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2024-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2024/enem-2024-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENEM 2025 -->
+          <div class="exam-card">
+            <span class="exam-card-year">Enem 2025</span>
+            <div class="exam-card-days">
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>1º dia</strong>
+                  <span>Linguagens, Códigos e Ciências Humanas — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2025-d1" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2025/enem-2025-dia1.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 1º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="exam-day-row">
+                <div class="exam-day-info">
+                  <strong>2º dia</strong>
+                  <span>Ciências da Natureza e Matemática — 90 questões</span>
+                </div>
+                <div class="exam-day-actions">
+                  <a href="prova.html?id=2025-d2" class="btn btn-primary">Iniciar</a>
+                  <a href="../assets/provas/2025/enem-2025-dia2.pdf" class="icon-link" target="_blank" rel="noopener" aria-label="Baixar PDF do 2º dia">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" style="color:var(--white)">
+            <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+            <span class="brand-text">
+              <span class="brand-eyebrow" style="color:#7E97C9">Preparação ENEM</span>
+              <span class="brand-name" style="color:var(--white)">Rui Conecti<span class="brand-dot">.</span></span>
+            </span>
+          </a>
+          <p>Plataforma educacional brasileira de apoio à preparação para o ENEM.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Estudar</h4>
+          <ul>
+            <li><a href="enem.html">Sobre o ENEM</a></li>
+            <li><a href="questoes.html">Banco de Questões</a></li>
+            <li><a href="provas.html">Provas Antigas para Resolver</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acompanhar</h4>
+          <ul>
+            <li><a href="tri.html">Minha TRI</a></li>
+            <li><a href="estudos.html">Plano de Estudos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Entrar / Criar conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rui Conecti. Plataforma educacional independente, sem vínculo oficial com o INEP.</span>
+        <span>Feito para estudantes brasileiros.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

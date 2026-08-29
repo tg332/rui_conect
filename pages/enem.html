@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações do ENEM — Rui Conecti</title>
+  <meta name="description" content="Tudo sobre o ENEM: o que é o exame, como a prova funciona, como escrever a redação, inscrição, gov.br, Página do Participante, Sisu/ProUni/Fies e faculdades locais.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="../index.html" class="brand" aria-label="Rui Conecti — página inicial">
+        <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+        <span class="brand-text">
+          <span class="brand-eyebrow">Preparação ENEM</span>
+          <span class="brand-name">Rui Conecti<span class="brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <!-- 5 itens principais, com ícone -->
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="enem.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>
+            Informações do ENEM
+          </a></li>
+          <li><a href="questoes.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Banco de Questões
+          </a></li>
+          <li><a href="provas.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            Provas Antigas para Resolver
+          </a></li>
+          <li><a href="tri.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>
+            TRI
+          </a></li>
+          <li><a href="sobre.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Sobre Nós
+          </a></li>
+        </ul>
+      </nav>
+
+      <!-- Usuário + menu "···" com o restante das seções + hambúrguer (mobile) -->
+      <div class="header-actions">
+        <div class="overflow-wrap">
+          <button class="icon-btn" id="overflow-toggle" aria-label="Mais opções" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <div class="overflow-menu" id="overflow-menu">
+            <a href="estudos.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+              Plano de Estudos
+            </a>
+            <a href="forum.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>
+              Fórum
+            </a>
+            <div class="divider"></div>
+            <a href="perfil.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              Meu Perfil
+            </a>
+          </div>
+        </div>
+
+        <button class="icon-btn desktop-only" aria-label="Buscar no site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="login.html" class="user-avatar-btn desktop-only" aria-label="Entrar ou criar conta">
+          <span class="user-avatar">R</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gaveta mobile: reúne tudo (5 itens + resto + entrar) -->
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Navegação mobile">
+      <ul>
+        <li><a href="enem.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>Informações do ENEM</a></li>
+        <li><a href="questoes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Banco de Questões</a></li>
+        <li><a href="provas.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>Provas Antigas para Resolver</a></li>
+        <li><a href="tri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>TRI</a></li>
+        <li><a href="sobre.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Sobre Nós</a></li>
+      </ul>
+      <p class="drawer-label">Mais</p>
+      <ul>
+        <li><a href="estudos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Plano de Estudos</a></li>
+        <li><a href="forum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>Fórum</a></li>
+        <li><a href="perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Meu Perfil</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-primary">Entrar / Criar conta</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== INTRODUÇÃO DA PÁGINA ===================== -->
+    <section class="page-intro">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Início</a> / Informações do ENEM</p>
+        <span class="hero-eyebrow">TUDO SOBRE O EXAME</span>
+        <h1>Informações do ENEM</h1>
+        <p class="lead">
+          Da inscrição à nota final: entenda como o Enem funciona, como se preparar
+          para cada etapa e como usar sua nota para entrar na faculdade.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ACORDEÃO + RESUMO ===================== -->
+    <section class="section enem-section" aria-labelledby="enem-topicos-heading">
+      <div class="container enem-layout">
+
+        <div class="enem-accordion-col">
+          <h2 id="enem-topicos-heading" class="visually-hidden">Tópicos sobre o ENEM</h2>
+
+          <div class="accordion" id="enem-accordion">
+
+            <!-- 01 — O QUE É O ENEM -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-1" aria-expanded="true" aria-controls="acc-painel-1">
+                  <span class="accordion-num">01</span>
+                  <span class="accordion-title">O que é o Enem</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-1" role="region" aria-labelledby="acc-btn-1">
+                <div class="accordion-panel-inner">
+                  <p>O <strong>Exame Nacional do Ensino Médio (Enem)</strong> é o principal exame educacional do Brasil, criado em 1998 e hoje aplicado pelo <strong>INEP</strong> (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira), órgão ligado ao Ministério da Educação (MEC).</p>
+                  <p>Originalmente, o Enem foi pensado apenas para avaliar a qualidade do ensino médio no país. Com o tempo, porém, ele se transformou na principal porta de entrada para o ensino superior brasileiro, sendo usado por:</p>
+                  <ul>
+                    <li>Universidades e institutos federais (via <strong>Sisu</strong>);</li>
+                    <li>Faculdades particulares, para bolsas (via <strong>ProUni</strong>) e financiamento (via <strong>Fies</strong>);</li>
+                    <li>Muitas faculdades privadas, como forma de ingresso direto (substituindo o vestibular tradicional);</li>
+                    <li>Universidades estrangeiras, principalmente em Portugal, que aceitam a nota do Enem para ingresso;</li>
+                    <li>Certificação de conclusão do ensino médio, para quem não concluiu os estudos na idade regular.</li>
+                  </ul>
+                  <p>Todos os anos, milhões de estudantes brasileiros fazem a prova — o Enem é considerado um dos maiores exames do mundo em número de participantes.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 — COMO A PROVA FUNCIONA -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-2" aria-expanded="false" aria-controls="acc-painel-2">
+                  <span class="accordion-num">02</span>
+                  <span class="accordion-title">Como a prova funciona</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-2" role="region" aria-labelledby="acc-btn-2" hidden>
+                <div class="accordion-panel-inner">
+                  <p>O Enem é aplicado em <strong>dois domingos</strong>, geralmente com uma semana de intervalo entre eles. A prova é dividida em <strong>quatro áreas do conhecimento</strong> mais a <strong>redação</strong>, totalizando <strong>180 questões objetivas</strong> de múltipla escolha (cinco alternativas cada) e um texto dissertativo-argumentativo.</p>
+
+                  <h4>Estrutura por dia (Enem 2026)</h4>
+                  <div class="day-grid">
+                    <div class="stat-card day-card">
+                      <span class="badge badge-neutral">1º dia — domingo, 8 de novembro de 2026</span>
+                      <ul>
+                        <li>Linguagens, Códigos e suas Tecnologias (45 questões): Língua Portuguesa, Literatura, Língua Estrangeira (inglês ou espanhol, à escolha), Artes, Educação Física e Tecnologias da Informação e Comunicação.</li>
+                        <li>Ciências Humanas e suas Tecnologias (45 questões): História, Geografia, Filosofia e Sociologia.</li>
+                        <li>Redação (texto dissertativo-argumentativo).</li>
+                        <li>Duração: 5h30.</li>
+                        <li>Portões abrem às 12h e fecham às 13h (horário de Brasília) — depois disso, não entra mais ninguém.</li>
+                        <li>Prova começa às 13h30 e termina às 19h.</li>
+                        <li>Só é permitido levar o caderno de questões embora a partir de 30 minutos antes do fim (18h).</li>
+                      </ul>
+                    </div>
+                    <div class="stat-card day-card">
+                      <span class="badge badge-neutral">2º dia — domingo, 15 de novembro de 2026</span>
+                      <ul>
+                        <li>Ciências da Natureza e suas Tecnologias (45 questões): Física, Química e Biologia.</li>
+                        <li>Matemática e suas Tecnologias (45 questões).</li>
+                        <li>Duração: 5h.</li>
+                        <li>Mesmos horários de portão (abre 12h, fecha 13h).</li>
+                        <li>Prova começa às 13h30 e termina às 18h30.</li>
+                        <li>Pode levar o caderno de questões a partir das 18h.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <h4>O que levar no dia da prova</h4>
+                  <ul>
+                    <li>Documento de identificação oficial com foto (RG, CNH, passaporte, carteira de trabalho, ou versões digitais como e-Título e CNH Digital em aplicativos oficiais);</li>
+                    <li>Caneta esferográfica de tinta preta, feita de material transparente (leve mais de uma, por segurança);</li>
+                    <li>Cartão de Confirmação da Inscrição, disponibilizado antes da prova na Página do Participante.</li>
+                  </ul>
+                  <div class="alert">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+                    <span>Não é permitido usar celular, relógio, boné ou qualquer objeto eletrônico durante a prova — geralmente eles precisam ser desligados e ensacados antes de entrar na sala.</span>
+                  </div>
+
+                  <h4>O que mais cai em cada área (foco de estudo)</h4>
+                  <p><strong>Matemática</strong> — a matemática básica (números, porcentagem, razão e proporção, regra de três, juros) é o assunto mais recorrente historicamente, seguida por estatística, geometria espacial, funções (1º e 2º grau) e geometria plana. O Enem costuma cobrar raciocínio lógico aplicado a situações do dia a dia, não cálculo avançado.</p>
+                  <p><strong>Ciências da Natureza</strong> — em Biologia, destacam-se fisiologia humana, genética/evolução e biologia celular. Em Física, aparecem mecânica (leis de Newton, energia), eletromagnetismo, termodinâmica e ondas/óptica. Em Química, prevalecem química geral (ligações e tabela periódica), físico-química e química orgânica, muitas vezes ligadas a temas ambientais.</p>
+                  <p><strong>Ciências Humanas</strong> — história e geografia do Brasil, geopolítica, questões ambientais e sociais, cidadania, filosofia política e sociologia contemporânea são os temas mais frequentes.</p>
+                  <p><strong>Linguagens</strong> — interpretação de texto é a habilidade mais cobrada, junto com funções da linguagem, gêneros textuais, literatura brasileira (movimentos literários) e uso da língua em contextos variados (inclusive linguagem coloquial, gírias, variação linguística).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 — REDAÇÃO -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-3" aria-expanded="false" aria-controls="acc-painel-3">
+                  <span class="accordion-num">03</span>
+                  <span class="accordion-title">Como se escreve no Enem (a Redação)</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-3" role="region" aria-labelledby="acc-btn-3" hidden>
+                <div class="accordion-panel-inner">
+                  <p>A redação do Enem pede um <strong>texto dissertativo-argumentativo, em prosa</strong>, sobre um tema de ordem social, cultural, científica ou política, com base em textos motivadores fornecidos na prova. Ela vale até <strong>1000 pontos</strong> — o mesmo peso de qualquer uma das quatro áreas de questões objetivas — e pode ser decisiva para a nota final.</p>
+
+                  <h4>Estrutura recomendada</h4>
+                  <ol>
+                    <li><strong>Introdução</strong>: apresentação do tema e da tese (o ponto de vista que será defendido).</li>
+                    <li><strong>Desenvolvimento</strong> (geralmente dois parágrafos): argumentos distintos, cada um sustentado por repertório sociocultural (dados, fatos históricos, referências culturais, etc.).</li>
+                    <li><strong>Conclusão</strong>: retomada da tese e apresentação da proposta de intervenção.</li>
+                  </ol>
+
+                  <h4>As 5 competências avaliadas</h4>
+                  <p>Cada uma vale de 0 a 200 pontos, avaliada em níveis de 40 em 40 pontos, totalizando até 1000:</p>
+                  <ul class="alt-list">
+                    <li><span class="alt-marker">1</span><div><p><strong>Domínio da modalidade escrita formal</strong> da língua portuguesa (gramática, ortografia, pontuação, concordância).</p></div></li>
+                    <li><span class="alt-marker">2</span><div><p><strong>Compreensão da proposta</strong> e desenvolvimento do tema dentro do gênero dissertativo-argumentativo, usando repertório sociocultural relevante. Fugir do tema ou não usar os textos motivadores prejudica bastante essa nota.</p></div></li>
+                    <li><span class="alt-marker">3</span><div><p><strong>Seleção, organização e interpretação</strong> de informações e argumentos em defesa de um ponto de vista.</p></div></li>
+                    <li><span class="alt-marker">4</span><div><p><strong>Conhecimento dos mecanismos linguísticos</strong> para a construção da argumentação (coesão: conectivos, referências, progressão textual). É preciso pelo menos um conectivo ligando cada parágrafo ao anterior.</p></div></li>
+                    <li><span class="alt-marker">5</span><div><p><strong>Elaboração de proposta de intervenção</strong> para o problema abordado, respeitando os direitos humanos. A proposta precisa ser detalhada, indicando geralmente: o que fazer, quem vai fazer, como vai fazer, para quem/o que e qual o efeito esperado.</p></div></li>
+                  </ul>
+
+                  <h4>Correção</h4>
+                  <p>Cada redação é corrigida por <strong>dois avaliadores independentes</strong>. Se a diferença entre as notas totais for maior que 100 pontos, ou maior que 80 pontos em qualquer competência isolada, um <strong>terceiro corretor</strong> entra para desempatar.</p>
+
+                  <h4>Situações que zeram a redação</h4>
+                  <ul>
+                    <li>Fuga total ao tema proposto;</li>
+                    <li>Não obedecer à estrutura dissertativo-argumentativa (por exemplo, escrever poema ou narração);</li>
+                    <li>Cópia integral dos textos motivadores (não pode reproduzi-los tal como estão);</li>
+                    <li>Texto com menos de 7 linhas;</li>
+                    <li>Desrespeito aos direitos humanos;</li>
+                    <li>Impropérios, desenhos ou qualquer marca que possa identificar o candidato fora do local apropriado.</li>
+                  </ul>
+
+                  <h4>Dicas de preparação</h4>
+                  <ul>
+                    <li>Treine escrevendo redações regularmente (o ideal costuma ser pelo menos uma por semana nos últimos meses antes da prova);</li>
+                    <li>Leia notícias e reportagens para construir repertório sociocultural atualizado;</li>
+                    <li>Peça correção de professores, cursinhos ou plataformas especializadas para identificar pontos fracos;</li>
+                    <li>Monte um roteiro de parágrafos antes de escrever, para não fugir da estrutura;</li>
+                    <li>Revise a redação ao final, prestando atenção à ortografia e à conexão entre parágrafos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 — INSCRIÇÃO -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-4" aria-expanded="false" aria-controls="acc-painel-4">
+                  <span class="accordion-num">04</span>
+                  <span class="accordion-title">Como funciona e como fazer a inscrição</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-4" role="region" aria-labelledby="acc-btn-4" hidden>
+                <div class="accordion-panel-inner">
+                  <h4>Cronograma do Enem 2026 (referência)</h4>
+                  <ul>
+                    <li>Publicação do edital: 22 de maio de 2026;</li>
+                    <li>Inscrições: 25 de maio a 12 de junho de 2026 (prazo prorrogado pelo MEC);</li>
+                    <li>Pagamento da taxa: até 17 de junho de 2026;</li>
+                    <li>Provas: 8 e 15 de novembro de 2026;</li>
+                    <li>Divulgação do gabarito: em até 10 dias úteis após o 2º dia de prova;</li>
+                    <li>Resultado (notas): previsto para janeiro de 2027.</li>
+                  </ul>
+                  <p><em>Observação: os prazos mudam a cada edição — sempre confirme as datas atualizadas no site oficial do INEP antes de se programar.</em></p>
+
+                  <h4>Passo a passo da inscrição</h4>
+                  <ol>
+                    <li>Acesse a <strong>Página do Participante</strong> em enem.inep.gov.br/participante.</li>
+                    <li>Faça login com sua conta <strong>gov.br</strong> (veja no tópico "O que é o GOV.br" como criar).</li>
+                    <li>Preencha o formulário com todos os dados solicitados: dados pessoais, endereço, escolaridade, tipo de escola (pública/privada), necessidade de atendimento especializado ou nome social, e o município onde deseja fazer a prova.</li>
+                    <li>Escolha a língua estrangeira (inglês ou espanhol).</li>
+                    <li>Confira atentamente todas as informações antes de enviar — erros de digitação podem comprometer a participação.</li>
+                    <li>Se não tiver isenção da taxa, emita o boleto (ou opção de Pix/cartão, quando disponível) no valor de R$ 85,00 e efetue o pagamento dentro do prazo. A inscrição só é confirmada com o pagamento.</li>
+                  </ol>
+
+                  <h4>Quem tem direito a isenção da taxa</h4>
+                  <ul>
+                    <li>Estudantes matriculados no 3º ano do ensino médio em escola pública no ano da prova;</li>
+                    <li>Quem cursou todo o ensino médio em escola pública, ou como bolsista integral em escola privada, com renda familiar igual ou inferior a um salário-mínimo e meio por pessoa;</li>
+                    <li>Pessoas em situação de vulnerabilidade socioeconômica inscritas no <strong>CadÚnico</strong>, desde que o cadastro esteja atualizado — cadastro desatualizado pode levar à negativa da isenção;</li>
+                    <li>Participantes do programa <strong>Pé-de-Meia</strong>, inclusive quem ainda está no 1º ou 2º ano do ensino médio e fará a prova como treineiro.</li>
+                  </ul>
+                  <p>Mesmo quem tem isenção aprovada <strong>precisa fazer a inscrição normalmente</strong> dentro do prazo — a isenção não inscreve o estudante automaticamente (exceto a novidade de 2026 para concluintes da rede pública, explicada a seguir).</p>
+
+                  <h4>Novidade de 2026: inscrição automática</h4>
+                  <p>A partir de 2026, estudantes concluintes do ensino médio da rede pública já ficam <strong>automaticamente inscritos</strong> no exame. Ainda assim, é obrigatório acessar a Página do Participante para:</p>
+                  <ul>
+                    <li>Confirmar a participação;</li>
+                    <li>Selecionar a língua estrangeira;</li>
+                    <li>Validar informações de acessibilidade e nome social, se necessário.</li>
+                  </ul>
+
+                  <h4>Incentivo Pé-de-Meia</h4>
+                  <p>Estudantes do programa Pé-de-Meia que cursam o último ano do ensino médio fazem a prova de graça e recebem um valor extra de R$ 200 por participarem dos dois domingos de prova.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 — GOV.BR -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-5" aria-expanded="false" aria-controls="acc-painel-5">
+                  <span class="accordion-num">05</span>
+                  <span class="accordion-title">O que é o GOV.br</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-5" role="region" aria-labelledby="acc-btn-5" hidden>
+                <div class="accordion-panel-inner">
+                  <p>O <strong>gov.br</strong> é a plataforma unificada de identidade digital do governo federal brasileiro. É com login e senha (ou CPF + validação) dessa conta que o cidadão acessa uma enorme quantidade de serviços públicos online — do Enem ao INSS, Receita Federal, SUS, Carteira de Trabalho digital, entre outros.</p>
+
+                  <h4>Níveis da conta gov.br</h4>
+                  <ul>
+                    <li><strong>Bronze</strong>: nível básico, criado automaticamente ao se cadastrar. Já permite acessar boa parte dos serviços, incluindo a inscrição no Enem.</li>
+                    <li><strong>Prata</strong>: nível intermediário, obtido validando dados por meio de reconhecimento facial pelo aplicativo (comparando com a foto da CNH) ou por login via aplicativo de banco credenciado.</li>
+                    <li><strong>Ouro</strong>: nível máximo de segurança, geralmente obtido por certificado digital, biometria da Justiça Eleitoral ou validação bancária completa. Libera todos os serviços digitais e permite ativar a verificação em duas etapas.</li>
+                  </ul>
+
+                  <h4>Como criar a conta</h4>
+                  <ol>
+                    <li>Acesse gov.br ou baixe o aplicativo oficial "gov.br" (Google Play ou App Store — nunca por links recebidos em WhatsApp/e-mail).</li>
+                    <li>Clique em "Criar sua conta gov.br".</li>
+                    <li>Informe o CPF e siga as instruções, preenchendo nome completo, data de nascimento e nome da mãe (conforme constam na Receita Federal).</li>
+                    <li>Crie uma senha forte.</li>
+                    <li>Valide o cadastro por e-mail ou SMS, digitando o código recebido.</li>
+                    <li>Pronto — a conta já pode ser usada para o Enem no nível bronze; para elevar o nível, é possível validar dados extras depois, no menu "Meus dados" ou "Selos de confiabilidade".</li>
+                  </ol>
+
+                  <p>Para o Enem, o nível bronze já é suficiente para se inscrever, mas manter os dados atualizados evita problemas na hora de confirmar informações ou consultar resultados.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06 — PÁGINA DO PARTICIPANTE -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-6" aria-expanded="false" aria-controls="acc-painel-6">
+                  <span class="accordion-num">06</span>
+                  <span class="accordion-title">Como usar a plataforma do INEP</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-6" role="region" aria-labelledby="acc-btn-6" hidden>
+                <div class="accordion-panel-inner">
+                  <p>A <strong>Página do Participante</strong> (enem.inep.gov.br/participante) é o painel central de todo o processo do Enem. É nela que o estudante:</p>
+                  <ol>
+                    <li>Faz a inscrição e acompanha o status (inscrito, aguardando pagamento, confirmado);</li>
+                    <li>Solicita isenção da taxa, nome social ou atendimento especializado (recursos de acessibilidade, tempo adicional, sala especial, etc.), sempre em datas específicas divulgadas no edital;</li>
+                    <li>Emite o boleto ou realiza o pagamento da taxa de inscrição;</li>
+                    <li>Baixa o Cartão de Confirmação da Inscrição, documento com o local exato da prova (endereço da escola/instituição, sala e horário) — geralmente disponibilizado alguns dias antes da aplicação;</li>
+                    <li>Consulta o gabarito oficial, divulgado dias após cada aplicação;</li>
+                    <li>Acessa o Boletim de Desempenho, com as notas das quatro áreas de conhecimento e da redação (incluindo a nota por competência), após a divulgação do resultado;</li>
+                    <li>Baixa, quando aplicável, o Certificado de Conclusão do Ensino Médio, para quem usou o Enem com essa finalidade.</li>
+                  </ol>
+
+                  <h4>Dicas práticas</h4>
+                  <ul>
+                    <li>Sempre confira o Cartão de Confirmação com antecedência para planejar o deslocamento até o local de prova;</li>
+                    <li>Guarde o login e senha da conta gov.br em lugar seguro — sem eles não é possível acessar nada na Página do Participante;</li>
+                    <li>Fique de olho nos prazos: o sistema fecha automaticamente após o encerramento de cada etapa (inscrição, isenção, pagamento).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 07 — USO DA NOTA -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-7" aria-expanded="false" aria-controls="acc-painel-7">
+                  <span class="accordion-num">07</span>
+                  <span class="accordion-title">Como usar sua nota para ingressar na faculdade</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-7" role="region" aria-labelledby="acc-btn-7" hidden>
+                <div class="accordion-panel-inner">
+                  <p>Fazer o Enem não garante, sozinho, uma vaga — o exame é a "chave" que abre as portas de diferentes programas e processos seletivos. Depois de receber a nota, o estudante escolhe por qual caminho seguir:</p>
+
+                  <h4>Sisu (Sistema de Seleção Unificada)</h4>
+                  <ul>
+                    <li>Usado para concorrer a vagas em universidades e institutos federais e estaduais públicos;</li>
+                    <li>A seleção é feita só pela nota do Enem (sem prova própria); na modalidade de ampla concorrência não há critério de renda;</li>
+                    <li>Existem também vagas reservadas por cotas (renda, raça, escola pública, pessoas com deficiência, entre outras), conforme a Lei de Cotas;</li>
+                    <li>Costuma aceitar a nota das últimas edições do Enem (em geral, as três mais recentes — confirme a regra vigente a cada edição);</li>
+                    <li>Funciona por nota de corte: durante o período de inscrição, o candidato escolhe curso e instituição e pode trocar de opção livremente enquanto as inscrições estiverem abertas; vale sempre a última escolha salva;</li>
+                    <li>Inscrições geralmente ocorrem no início do ano (para o processo referente ao ano anterior) e podem ter uma segunda chamada.</li>
+                  </ul>
+
+                  <h4>ProUni (Programa Universidade para Todos)</h4>
+                  <ul>
+                    <li>Oferece bolsas de estudo em faculdades privadas, integrais (100%) ou parciais (50%);</li>
+                    <li>Exige nota mínima de 450 pontos na média das quatro áreas + redação, e não pode ter zerado a redação;</li>
+                    <li>Tem critérios de renda familiar per capita e de ter cursado o ensino médio (ao menos em parte) em escola pública, ou como bolsista integral em escola privada;</li>
+                    <li>Costuma aceitar a nota da edição atual ou da anterior do Enem.</li>
+                  </ul>
+
+                  <h4>Fies (Fundo de Financiamento Estudantil)</h4>
+                  <ul>
+                    <li>Financiamento estudantil para cursar uma faculdade privada, pago depois de formado;</li>
+                    <li>Indicado para quem não conseguiu vaga pelo Sisu nem bolsa suficiente pelo ProUni;</li>
+                    <li>Aceita notas de qualquer edição do Enem a partir de 2010;</li>
+                    <li>Antes de contratar, é importante avaliar o valor total do curso, juros, prazo de pagamento e a própria capacidade financeira futura, para evitar endividamento.</li>
+                  </ul>
+
+                  <h4>Ingresso direto em faculdades privadas</h4>
+                  <p>Muitas instituições particulares aceitam a nota do Enem como forma de ingresso direto, substituindo o vestibular tradicional — basta informar o desempenho no processo seletivo da própria faculdade. Essa modalidade costuma ser mais simples e flexível, e algumas instituições oferecem descontos progressivos conforme a nota.</p>
+
+                  <h4>Resumo de como cada nota "vale" com o tempo</h4>
+                  <table class="exam-table enem-table">
+                    <thead>
+                      <tr><th>Programa</th><th>Edições aceitas da nota</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Sisu</td><td>geralmente as 3 últimas edições</td></tr>
+                      <tr><td>ProUni</td><td>edição atual ou a anterior</td></tr>
+                      <tr><td>Fies</td><td>qualquer edição a partir de 2010</td></tr>
+                    </tbody>
+                  </table>
+                  <p><em>Confira sempre o edital vigente de cada programa, pois essas regras podem mudar a cada ano.</em></p>
+
+                  <h4>Uso internacional</h4>
+                  <p>Mais de 50 universidades portuguesas têm convênio com o INEP e aceitam a nota do Enem para ingresso. Outros países como Reino Unido, Irlanda, França, Estados Unidos e Canadá também reconhecem o exame em processos seletivos específicos.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 08 — FACULDADES LOCAIS -->
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" id="acc-btn-8" aria-expanded="false" aria-controls="acc-painel-8">
+                  <span class="accordion-num">08</span>
+                  <span class="accordion-title">Faculdades locais (região de Tucuruí, Pará)</span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </h3>
+              <div class="accordion-panel" id="acc-painel-8" role="region" aria-labelledby="acc-btn-8" hidden>
+                <div class="accordion-panel-inner">
+                  <h4>Tucuruí</h4>
+                  <p><strong>UFPA — Campus Universitário de Tucuruí</strong> (pública, federal)<br>
+                  Criado em 2005, inicialmente como Núcleo Universitário. Oferece cursos de engenharia com forte relação com a vocação industrial da cidade (a Usina Hidrelétrica de Tucuruí):</p>
+                  <ul>
+                    <li>Engenharia Civil (bacharelado)</li>
+                    <li>Engenharia Elétrica (bacharelado)</li>
+                    <li>Engenharia Mecânica (bacharelado)</li>
+                    <li>Engenharia de Computação (bacharelado)</li>
+                    <li>Engenharia Sanitária e Ambiental (bacharelado)</li>
+                    <li>Licenciatura em Física</li>
+                  </ul>
+                  <p>Ingresso majoritariamente pelo Sisu, com nota do Enem.</p>
+
+                  <p><strong>UEPA — Campus de Tucuruí</strong> (pública, estadual)<br>
+                  Forma profissionais principalmente nas áreas de saúde e licenciatura:</p>
+                  <ul>
+                    <li>Enfermagem (bacharelado)</li>
+                    <li>Educação Física</li>
+                    <li>Biologia (licenciatura)</li>
+                  </ul>
+                  <p>Ingresso via processo seletivo próprio e também pelo Sisu.</p>
+
+                  <p><strong>Faculdade Gamaliel</strong> (privada)<br>
+                  Uma das maiores faculdades particulares da cidade, com destaque para Direito e Enfermagem. Costuma aceitar a nota do Enem para ingresso.</p>
+
+                  <p><strong>Outras opções privadas em Tucuruí:</strong></p>
+                  <ul>
+                    <li><strong>Unopar</strong> (Ser Educacional) — cursos de gestão, licenciaturas, saúde, presenciais e EAD.</li>
+                    <li><strong>Anhanguera</strong> (duas unidades na cidade) — administração, pedagogia, enfermagem, entre outros, presencial e semipresencial.</li>
+                    <li><strong>Uniplan</strong> — cursos técnicos e superiores voltados à demanda local.</li>
+                    <li><strong>Uninter</strong> — foco forte em EAD/semipresencial, com grande variedade de cursos de graduação e pós.</li>
+                  </ul>
+
+                  <h4>Marabá (principal polo universitário da região)</h4>
+                  <p><strong>UNIFESSPA</strong> (Universidade Federal do Sul e Sudeste do Pará) — pública, federal. A maior e mais diversificada instituição da região, com dois campi na cidade (Campus I e Campus II - Marabá Unidade II). Oferece dezenas de cursos, incluindo engenharias, licenciaturas, humanidades e ciências sociais aplicadas. Ingresso pelo Sisu.</p>
+                  <p><strong>UEPA — Campus VIII</strong> (pública, estadual) — cursos voltados à saúde e licenciaturas.</p>
+                  <p><strong>Centro Universitário Anhanguera de Marabá</strong> e <strong>Faculdade Carajás</strong> (privadas) — cursos como administração, enfermagem e áreas técnicas, com forte presença de bolsas do ProUni.</p>
+
+                  <h4>Cursos mais procurados na região</h4>
+                  <p>Levando em conta a vocação econômica local (energia elétrica, mineração, agropecuária) e a alta demanda social por saúde e educação, os cursos mais buscados costumam ser:</p>
+                  <ul>
+                    <li>Enfermagem</li>
+                    <li>Direito</li>
+                    <li>Educação Física</li>
+                    <li>Engenharias (Civil, Elétrica, Mecânica e de Computação)</li>
+                    <li>Pedagogia e outras licenciaturas</li>
+                    <li>Administração</li>
+                  </ul>
+                  <p><em>Recomenda-se sempre confirmar, diretamente com cada instituição ou no site do Sisu/e-MEC, a lista atualizada de cursos, vagas e notas de corte, já que essas informações mudam a cada processo seletivo.</em></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===================== BARRA LATERAL ===================== -->
+        <aside class="enem-sidebar">
+          <div class="stat-card enem-sidebar-card">
+            <h4>Cronograma Enem 2026</h4>
+            <ul class="sidebar-dates">
+              <li><span>Inscrições</span><strong>25/mai a 12/jun</strong></li>
+              <li><span>Pagamento da taxa</span><strong>até 17/jun</strong></li>
+              <li><span>1º dia de prova</span><strong>8 de novembro</strong></li>
+              <li><span>2º dia de prova</span><strong>15 de novembro</strong></li>
+              <li><span>Resultado</span><strong>janeiro de 2027</strong></li>
+            </ul>
+          </div>
+
+          <div class="stat-card enem-sidebar-card">
+            <h4>Resumo rápido</h4>
+            <ol class="sidebar-summary">
+              <li>gov.br → Página do Participante → preencher dados → pagar taxa (ou isenção) → confirmar.</li>
+              <li>Estudo: focar nas 4 áreas + treinar redação (as 5 competências).</li>
+              <li>Prova: dois domingos, 5h30 e 5h de duração, chegar até 13h.</li>
+              <li>Resultado: sai meses depois, na própria Página do Participante.</li>
+              <li>Nota: Sisu (público), ProUni (bolsa privada), Fies (financiamento) ou ingresso direto em faculdades privadas.</li>
+              <li>Faculdades locais: UFPA e UEPA em Tucuruí; UNIFESSPA e privadas em Marabá.</li>
+            </ol>
+          </div>
+
+          <div class="alert enem-sidebar-alert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+            <span>Datas e regras mudam a cada edição. Confirme sempre no site oficial do INEP antes de se programar.</span>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" style="color:var(--white)">
+            <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+            <span class="brand-text">
+              <span class="brand-eyebrow" style="color:#7E97C9">Preparação ENEM</span>
+              <span class="brand-name" style="color:var(--white)">Rui Conecti<span class="brand-dot">.</span></span>
+            </span>
+          </a>
+          <p>Plataforma educacional brasileira de apoio à preparação para o ENEM.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Estudar</h4>
+          <ul>
+            <li><a href="enem.html">Sobre o ENEM</a></li>
+            <li><a href="questoes.html">Banco de Questões</a></li>
+            <li><a href="provas.html">Provas Antigas para Resolver</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acompanhar</h4>
+          <ul>
+            <li><a href="tri.html">Minha TRI</a></li>
+            <li><a href="estudos.html">Plano de Estudos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Entrar / Criar conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rui Conecti. Plataforma educacional independente, sem vínculo oficial com o INEP.</span>
+        <span>Feito para estudantes brasileiros.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
