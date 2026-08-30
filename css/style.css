@@ -87,6 +87,10 @@ html, body {
   -ms-overflow-style: none;   
 }
 
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
 img, svg { max-width: 100%; display: block; }
 
 a {
