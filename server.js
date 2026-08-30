@@ -82,3 +82,29 @@ app.post('/api/login', (req, res) => {
 app.listen(3000, () => {
     console.log('🚀 Servidor rodando em http://localhost:3000');
 });
+
+// ROTA DE CADASTRO
+app.post('/api/cadastro', async (req, res) => {
+    const { nome, email, senha } = req.body;
+
+    if (!nome || !email || !senha) {
+        return res.status(400).json({ mensagem: 'Preencha todos os campos!' });
+    }
+
+    try {
+        const senhaHash = await bcrypt.hash(senha, 10);
+        const sql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
+        
+        db.query(sql, [nome, email, senhaHash], (err) => {
+            if (err) {
+                if (err.code === 'ER_DUP_ENTRY') {
+                    return res.status(400).json({ mensagem: 'E-mail ou Usuário já cadastrado!' });
+                }
+                return res.status(500).json({ mensagem: 'Erro interno ao cadastrar.' });
+            }
+            res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!' });
+        });
+    } catch {
+        res.status(500).json({ mensagem: 'Erro ao processar a senha.' });
+    }
+});
