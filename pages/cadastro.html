@@ -9,13 +9,29 @@
     <title>cadastro</title>
 </head>
 <body class="cadastro">
-    <div class="conteiner-cadastro">
+    <div class="auth-card">
         <h1>cadastro</h1>
-        <input type="text" id="email" placeholder="EMAIL">
-        <input type="password" id="password" placeholder="SENHA">
-        <input type="password" id="confirme-password" placeholder="CONFIRME SUA SENHA">
-        <input type="text" id="usuario" placeholder="USUÁRIO">
-        
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            <input type="text" id="usuario" placeholder="Usuário">
+        </label>
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <input type="text" id="email" placeholder="Email">
+        </label>
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <input type="password" id="password" placeholder="Senha">
+        </label>
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <input type="password" id="confirme-password" placeholder="Confirme sua senha">
+        </label>
+
         <!--<label for="text" placeholder="nome da faculdade">Universidade</label>
         <input 
         type="text" 
@@ -26,7 +42,12 @@
         <option value="Tiago">
         </datalist>
     -->
-        <button type="submit" id="bnt-cadastrar">cadastrar</button>
+
+        <div class="auth-actions auth-actions--end">
+            <button type="submit" id="bnt-cadastrar" class="auth-btn">cadastrar</button>
+        </div>
+
+        <p class="auth-footer auth-footer--center">precisa de ajuda para fazer cadastro?</p>
     </div>
 
     <script src="/js/cadastro.js"></script>

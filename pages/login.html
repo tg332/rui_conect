@@ -7,15 +7,28 @@
     <title>login</title>
 </head>
 <body class="login">
-    <div class="container-login">
+    <div class="auth-card">
         <h1>Login</h1>
-        <input type="text" id="email" placeholder="Usuário ou Email">
-        <input type="password" id="senha" placeholder="Senha">
-        <button type="submit" id="btn-entrar" >Entrar</button>
-        <p>
-        Ainda não tem uma conta?
-        <a href="cadastro.html" id="link-cadastro">Cadastre-se</a>
-    </p>
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <input type="text" id="email" placeholder="Usuário ou Email">
+        </label>
+
+        <label class="auth-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <input type="password" id="senha" placeholder="Senha">
+        </label>
+
+        <div class="auth-actions">
+            <span class="auth-link">Esqueceu sua senha?</span>
+            <button type="submit" id="btn-entrar" class="auth-btn">Entrar</button>
+        </div>
+
+        <p class="auth-footer">
+            Ainda não tem uma conta?
+            <a href="cadastro.html" id="link-cadastro">Cadastre-se</a>
+        </p>
     </div>
 
     <script src="/js/auth.js"></script>

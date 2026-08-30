@@ -591,70 +591,157 @@ body.login {
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
+    padding: 0;
 
-    background-color: var(--blue-bg);
+    background: linear-gradient(160deg, var(--blue-deep) 0%, var(--ink) 80%);
 
     overflow: hidden;
 }
 
-.container-login {
+/* Dentro do modal, o card do login deve preencher a caixa inteira
+   (diferente do cadastro, que fica menor que o fundo por trás). */
+body.login .auth-card {
     width: 100%;
-    max-width: 400px;
+    height: 100%;
+    max-width: none;
+
+    justify-content: center;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* ============================================================
+   CARD DE AUTENTICAÇÃO (login e cadastro)
+   ============================================================ */
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+
+    box-sizing: border-box;
+    padding: 20rem 10rem;
 
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 
-    justify-content: center;
+    border-radius: 28px;
+    border: 1px solid var(--blue-teal);
+    background: var(--blue-soft);
+    box-shadow: var(--shadow-elevated);
+
+    color: var(--white);
+}
+
+.auth-card h1 {
+    margin-bottom: 0.25rem;
+}
+
+.auth-field {
+    display: flex;
     align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.9rem 1.1rem;
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.container-login h1 {
-    margin-bottom: 20px;
+.auth-field input:-webkit-autofill,
+.auth-field input:-webkit-autofill:hover,
+.auth-field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--white);
+    caret-color: var(--white);
+    transition: background-color 9999s ease-in-out 0s;
 }
 
-.container-login input {
-    width: 100%;
-    max-width: 300px;
+.auth-field svg {
+    width: 18px;
+    height: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    flex-shrink: 0;
+}
 
-    padding: 12px;
-    margin-top: 10px;
+.auth-field input {
+    flex: 1;
+    min-width: 0;
 
-    appearance: none;
-    -webkit-appearance: none;
-
-    border: 2px solid var(--blue-soft);
-    border-radius: var(--radius-sm);
-    background: var(--white);
+    border: none;
+    background: transparent;
+    outline: none;
 
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: var(--ink);
-    border-radius: 20px;
-}
-
-.container-login input:focus {
-    outline: none;
-    border-color: var(--blue-primary);
-}
-
-.container-login button {
-    width: 100%;
-    max-width: 250px;
-    padding: 12px;
-    margin-top: 15px;
-    cursor: pointer;
-    background: var(--blue-primary);
     color: var(--white);
-    box-shadow: var(--shadow-card);
+}
 
+.auth-field input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.auth-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.25rem;
+}
+
+.auth-actions--end {
+    justify-content: flex-end;
+}
+
+.auth-link {
+    font-size: 0.85rem;
+    color: var(--blue-soft);
+}
+
+.auth-btn {
     appearance: none;
     -webkit-appearance: none;
-    border: none;
-    border-radius: 10px;
+
+    padding: 0.65rem 1.6rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--white);
+
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.container-login button:hover { background: var(--blue-primary-hover); }
+.auth-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--white);
+}
+
+.auth-footer {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-footer--center {
+    text-align: center;
+}
+
+.auth-footer a {
+    color: var(--blue-soft);
+}
+
+.auth-footer a:hover {
+    color: var(--white);
+}
 
 
 /* ============================================================
@@ -757,60 +844,7 @@ body.cadastro {
 
     padding: 30px;
 
-    background-color: var(--blue-bg);
+    background-color: var(--blue-primary);
 
     overflow: hidden;
-}
-
-.conteiner-cadastro {
-    box-sizing: border-box;
-
-    width: 100%;
-    max-width: 600px;
-
-    padding: 40px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.conteiner-cadastro input {
-    width: 100%;
-    max-width: 300px;
-
-    padding: 12px;
-    margin-top: 10px;
-
-    appearance: none;
-    -webkit-appearance: none;
-
-    border: 2px solid var(--blue-soft);
-    border-radius: var(--radius-sm);
-    background: var(--white);
-
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    color: var(--ink);
-}
-
-.conteiner-cadastro input:focus {
-    outline: none;
-    border-color: var(--blue-primary);
-}
-
-.conteiner-cadastro button {
-    width: 100%;
-    max-width: 300px;
-
-    padding: 12px;
-    margin-top: 15px;
-
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    border-radius: 20px;
-
-    cursor: pointer;
 }
