@@ -640,13 +640,21 @@ body.login {
 
 .container-login button {
     width: 100%;
-    max-width: 300px;
-
+    max-width: 250px;
     padding: 12px;
     margin-top: 15px;
-
     cursor: pointer;
+    background: var(--blue-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-card);
+
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
 }
+
+.container-login button:hover { background: var(--blue-primary-hover); }
 
 
 /* ============================================================
@@ -798,6 +806,11 @@ body.cadastro {
 
     padding: 12px;
     margin-top: 15px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 20px;
 
     cursor: pointer;
 }
