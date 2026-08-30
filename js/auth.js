@@ -4,37 +4,92 @@ const btnEntrar = document.getElementById('btn-entrar');
 const inputEmail = document.getElementById('email');
 const inputSenha = document.getElementById('senha');
 
-btnEntrar.addEventListener('click', async (event) => {
-    event.preventDefault();
 
-    const email = inputEmail.value.trim();
-    const senha = inputSenha.value.trim();
+// ============================================================
+// LOGIN
+// ============================================================
 
-    if (!email || !senha) {
-        alert('Por favor, preencha todos os campos!');
-        return;
-    }
+if (btnEntrar) {
 
-    try {
-        const response = await fetch(`${API_URL}/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email, senha })
-        });
+    btnEntrar.addEventListener('click', async (event) => {
 
-        const data = await response.json();
+        event.preventDefault();
 
-        if (response.ok) {
-            alert(`Bem-vindo, ${data.nome}!`);
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('usuario', data.nome);
-        } else {
-            alert(data.mensagem);
+        const email = inputEmail.value.trim();
+        const senha = inputSenha.value.trim();
+
+        if (!email || !senha) {
+            alert('Por favor, preencha todos os campos!');
+            return;
         }
-    } catch (error) {
-        console.error('Erro na requisição:', error);
-        alert('Erro ao conectar com o servidor. Verifique se o Node.js está rodando!');
-    }
-});
+
+        try {
+
+            const response = await fetch(`${API_URL}/login`, {
+
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+
+                body: JSON.stringify({
+                    email,
+                    senha
+                })
+
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+
+                alert(`Bem-vindo, ${data.nome}!`);
+
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('usuario', data.nome);
+
+            } else {
+
+                alert(data.mensagem);
+
+            }
+
+        } catch (error) {
+
+            console.error('Erro na requisição:', error);
+
+            alert(
+                'Erro ao conectar com o servidor. ' +
+                'Verifique se o Node.js está rodando!'
+            );
+
+        }
+
+    });
+
+}
+
+
+// ============================================================
+// LINK PARA CADASTRO
+// ============================================================
+
+const linkCadastro = document.getElementById('link-cadastro');
+
+if (linkCadastro) {
+
+    linkCadastro.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        window.parent.postMessage(
+            {
+                tipo: 'abrir-cadastro'
+            },
+            '*'
+        );
+
+    });
+
+}

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initOverflowMenu();
   markActiveNavLink();
   initAccordion();
+  initLoginModal();
 });
 
 /**
@@ -120,3 +121,71 @@ function initAccordion() {
     });
   });
 }
+
+function initLoginModal() {
+
+    const loginButton = document.querySelector('.user-avatar-btn');
+
+    if (!loginButton) return;
+
+    loginButton.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        abrirModal('pages/login.html');
+    });
+}
+
+
+function abrirModal(pagina, fullscreen = false) {
+
+    const modal = document.createElement('div');
+
+    modal.className = fullscreen ? 'login-modal login-modal--fullscreen' : 'login-modal';
+
+    modal.innerHTML = `
+        <div class="login-modal-content${fullscreen ? ' login-modal-content--fullscreen' : ''}">
+
+            <button class="login-modal-close" aria-label="Fechar">
+                &times;
+            </button>
+
+            <iframe
+                src="${pagina}"
+                title="Página">
+            </iframe>
+
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const iframe = modal.querySelector('iframe');
+    const fechar = modal.querySelector('.login-modal-close');
+
+    fechar.addEventListener('click', () => {
+        modal.remove();
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+}
+
+window.addEventListener('message', (event) => {
+
+    if (event.data.tipo === 'abrir-cadastro') {
+
+        const modal = document.querySelector('.login-modal');
+
+        if (modal) {
+            modal.remove();
+        }
+
+        abrirModal('pages/cadastro.html', true);
+
+    }
+
+});
