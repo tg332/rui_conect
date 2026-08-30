@@ -619,6 +619,23 @@ body.login {
 
     padding: 12px;
     margin-top: 10px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: 2px solid var(--blue-soft);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--ink);
+    border-radius: 20px;
+}
+
+.container-login input:focus {
+    outline: none;
+    border-color: var(--blue-primary);
 }
 
 .container-login button {
@@ -749,4 +766,38 @@ body.cadastro {
     flex-direction: column;
 
     justify-content: center;
+}
+
+.conteiner-cadastro input {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px;
+    margin-top: 10px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: 2px solid var(--blue-soft);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.conteiner-cadastro input:focus {
+    outline: none;
+    border-color: var(--blue-primary);
+}
+
+.conteiner-cadastro button {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px;
+    margin-top: 15px;
+
+    cursor: pointer;
 }
