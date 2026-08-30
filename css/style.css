@@ -82,6 +82,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html, body {
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
 img, svg { max-width: 100%; display: block; }
 
 a {
