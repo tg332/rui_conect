@@ -53,6 +53,12 @@
 /* ---- Reset básico ---- */
 *, *::before, *::after { box-sizing: border-box; }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -98,18 +104,6 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 p { margin: 0 0 var(--space-md); color: #33476B; }
 
 .mono { font-family: var(--font-mono); }
-
-/* ---- Foco visível (acessibilidade) ---- */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid var(--accent-fill);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
 
 /* ---- Container ---- */
 .container {
@@ -588,4 +582,50 @@ textarea:focus-visible,
   gap: var(--space-sm);
   font-size: 0.85rem;
   color: #8CA3D1;
+}
+
+body.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #eaf7fc;
+}
+
+.container-login {
+    width: 100%;
+    max-width: 500px;
+    min-height: 680px;
+
+    padding: 40px;
+
+    background-color: white;
+    border: 2px solid #D6E4FA;
+    border-radius: 10px;
+
+    /* Centraliza o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login h1 {
+    margin-bottom: 20px;
+}
+
+.container-login input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.container-login button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    margin-top: 15px;
+    cursor: pointer;
 }
