@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco de Questões — Rui Conecti</title>
+  <meta name="description" content="Pratique questões antigas do ENEM filtrando por área, tema e dificuldade, com correção na hora.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="../index.html" class="brand" aria-label="Rui Conecti — página inicial">
+        <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+        <span class="brand-text">
+          <span class="brand-eyebrow">Preparação ENEM</span>
+          <span class="brand-name">Rui Conecti<span class="brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="enem.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>
+            Informações do ENEM
+          </a></li>
+          <li><a href="questoes.html" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Banco de Questões
+          </a></li>
+          <li><a href="provas.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            Provas Antigas para Resolver
+          </a></li>
+          <li><a href="tri.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>
+            TRI
+          </a></li>
+          <li><a href="sobre.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Sobre Nós
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="overflow-wrap">
+          <button class="icon-btn" id="overflow-toggle" aria-label="Mais opções" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <div class="overflow-menu" id="overflow-menu">
+            <a href="estudos.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+              Plano de Estudos
+            </a>
+            <a href="forum.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>
+              Fórum
+            </a>
+            <div class="divider"></div>
+            <a href="perfil.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              Meu Perfil
+            </a>
+          </div>
+        </div>
+
+        <button class="icon-btn desktop-only" aria-label="Buscar no site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="login.html" class="user-avatar-btn desktop-only" aria-label="Entrar ou criar conta">
+          <span class="user-avatar">R</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Navegação mobile">
+      <ul>
+        <li><a href="enem.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>Informações do ENEM</a></li>
+        <li><a href="questoes.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Banco de Questões</a></li>
+        <li><a href="provas.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>Provas Antigas para Resolver</a></li>
+        <li><a href="tri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>TRI</a></li>
+        <li><a href="sobre.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Sobre Nós</a></li>
+      </ul>
+      <p class="drawer-label">Mais</p>
+      <ul>
+        <li><a href="estudos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Plano de Estudos</a></li>
+        <li><a href="forum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>Fórum</a></li>
+        <li><a href="perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Meu Perfil</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-primary">Entrar / Criar conta</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== INTRODUÇÃO DA PÁGINA ===================== -->
+    <section class="page-intro">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Início</a> / Banco de Questões</p>
+        <span class="hero-eyebrow">PRATIQUE POR ÁREA</span>
+        <h1>Banco de Questões</h1>
+        <p class="lead">
+          Milhares de questões de provas antigas do Enem, organizadas por área, tema e
+          nível de dificuldade. Filtre pelo que você quer treinar e responda uma questão
+          por vez, com correção imediata.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== FILTROS ===================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+
+        <div class="filter-bar" id="questoes-filtros">
+          <label class="filter-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="questoes-busca" placeholder="Buscar por tema, assunto ou palavra-chave">
+          </label>
+
+          <div class="filter-divider" aria-hidden="true"></div>
+
+          <div class="filter-group" id="questoes-filtro-dificuldade" role="group" aria-label="Filtrar por dificuldade">
+            <button type="button" class="filter-chip" aria-pressed="false" data-dificuldade="facil">Fácil</button>
+            <button type="button" class="filter-chip" aria-pressed="false" data-dificuldade="medio">Médio</button>
+            <button type="button" class="filter-chip" aria-pressed="false" data-dificuldade="dificil">Difícil</button>
+          </div>
+
+          <div class="filter-divider" aria-hidden="true"></div>
+
+          <div class="filter-group" id="questoes-filtro-status" role="group" aria-label="Filtrar por status">
+            <button type="button" class="filter-chip" aria-pressed="false" data-status="nao-respondidas">Ainda não respondidas</button>
+            <button type="button" class="filter-chip" aria-pressed="false" data-status="erradas">Que eu errei</button>
+          </div>
+
+          <p class="filter-empty-note">Os filtros ainda não alteram os resultados — em breve.</p>
+        </div>
+
+        <!-- ===================== ÁREAS ===================== -->
+        <div class="grid-cards" id="questoes-areas">
+
+          <a href="#" class="card" data-area="linguagens">
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h16"/></svg>
+            </span>
+            <h3>Linguagens, Códigos e suas Tecnologias</h3>
+            <p>Interpretação de texto, literatura, gramática, artes e língua estrangeira.</p>
+            <span class="card-cta">Praticar questões
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="#" class="card" data-area="humanas">
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+            </span>
+            <h3>Ciências Humanas e suas Tecnologias</h3>
+            <p>História, geografia, filosofia e sociologia do Brasil e do mundo.</p>
+            <span class="card-cta">Praticar questões
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="#" class="card" data-area="natureza">
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6L4 20a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3L15 8V2"/><path d="M9 2h6"/></svg>
+            </span>
+            <h3>Ciências da Natureza e suas Tecnologias</h3>
+            <p>Física, química e biologia, do jeito que costuma cair na prova.</p>
+            <span class="card-cta">Praticar questões
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="#" class="card" data-area="matematica">
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h.01M12 9h.01M16 9h.01M8 13h8M8 17h4"/></svg>
+            </span>
+            <h3>Matemática e suas Tecnologias</h3>
+            <p>Álgebra, geometria, estatística e as contas que mais assombram no dia da prova.</p>
+            <span class="card-cta">Praticar questões
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUESTÃO EM DESTAQUE (prévia) ===================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="hero-eyebrow">COMO FUNCIONA</span>
+          <h2>Uma questão por vez, com correção na hora</h2>
+          <p>Assim que você escolher uma área, é assim que a tela de prática vai se parecer.</p>
+        </div>
+
+        <div class="question-card" style="max-width: 720px; margin: 0 auto;">
+          <div class="question-meta">
+            <span class="badge badge-neutral">Linguagens · Enem 2019</span>
+            <span class="badge badge-medio">Médio</span>
+          </div>
+
+          <p class="question-statement">
+            "A linguagem verbal é apenas uma das muitas formas de expressão do ser humano
+            [...]." Considerando o fragmento, assinale a alternativa que melhor resume a
+            ideia central do texto.
+          </p>
+
+          <ul class="question-options">
+            <li class="question-option">
+              <span class="alt-marker">A</span>
+              <span>A linguagem verbal é superior às demais formas de comunicação humana.</span>
+            </li>
+            <li class="question-option">
+              <span class="alt-marker">B</span>
+              <span>A comunicação humana se realiza por meio de múltiplas linguagens, verbais e não verbais.</span>
+            </li>
+            <li class="question-option">
+              <span class="alt-marker">C</span>
+              <span>Apenas a escrita formal deve ser considerada linguagem legítima.</span>
+            </li>
+            <li class="question-option">
+              <span class="alt-marker">D</span>
+              <span>As linguagens não verbais substituem completamente a linguagem escrita.</span>
+            </li>
+          </ul>
+
+          <div class="exam-nav-row" style="justify-content: center;">
+            <a href="#" class="btn btn-primary">Começar a praticar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" style="color:var(--white)">
+            <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+            <span class="brand-text">
+              <span class="brand-eyebrow" style="color:#7E97C9">Preparação ENEM</span>
+              <span class="brand-name" style="color:var(--white)">Rui Conecti<span class="brand-dot">.</span></span>
+            </span>
+          </a>
+          <p>Plataforma educacional brasileira de apoio à preparação para o ENEM.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Estudar</h4>
+          <ul>
+            <li><a href="enem.html">Sobre o ENEM</a></li>
+            <li><a href="questoes.html">Banco de Questões</a></li>
+            <li><a href="provas.html">Provas Antigas para Resolver</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acompanhar</h4>
+          <ul>
+            <li><a href="tri.html">Minha TRI</a></li>
+            <li><a href="estudos.html">Plano de Estudos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Entrar / Criar conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rui Conecti. Plataforma educacional independente, sem vínculo oficial com o INEP.</span>
+        <span>Feito para estudantes brasileiros.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

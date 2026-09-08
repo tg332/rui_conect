@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano de Estudos — Rui Conecti</title>
+  <meta name="description" content="Organize sua semana de estudos para o Enem, área por área, com tarefas e prazos.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="top-bar" aria-hidden="true"></div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="../index.html" class="brand" aria-label="Rui Conecti — página inicial">
+        <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+        <span class="brand-text">
+          <span class="brand-eyebrow">Preparação ENEM</span>
+          <span class="brand-name">Rui Conecti<span class="brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="enem.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>
+            Informações do ENEM
+          </a></li>
+          <li><a href="questoes.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Banco de Questões
+          </a></li>
+          <li><a href="provas.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            Provas Antigas para Resolver
+          </a></li>
+          <li><a href="tri.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>
+            TRI
+          </a></li>
+          <li><a href="sobre.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            Sobre Nós
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="overflow-wrap">
+          <button class="icon-btn" id="overflow-toggle" aria-label="Mais opções" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </button>
+          <div class="overflow-menu" id="overflow-menu">
+            <a href="estudos.html" aria-current="page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+              Plano de Estudos
+            </a>
+            <a href="forum.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>
+              Fórum
+            </a>
+            <div class="divider"></div>
+            <a href="perfil.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              Meu Perfil
+            </a>
+          </div>
+        </div>
+
+        <button class="icon-btn desktop-only" aria-label="Buscar no site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="login.html" class="user-avatar-btn desktop-only" aria-label="Entrar ou criar conta">
+          <span class="user-avatar">R</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Navegação mobile">
+      <ul>
+        <li><a href="enem.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 8h16M4 16h16"/></svg>Informações do ENEM</a></li>
+        <li><a href="questoes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Banco de Questões</a></li>
+        <li><a href="provas.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>Provas Antigas para Resolver</a></li>
+        <li><a href="tri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M11 19V5M18 19v-7"/></svg>TRI</a></li>
+        <li><a href="sobre.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Sobre Nós</a></li>
+      </ul>
+      <p class="drawer-label">Mais</p>
+      <ul>
+        <li><a href="estudos.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Plano de Estudos</a></li>
+        <li><a href="forum.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-3.8-7.1L21 3l-1.2 3.6c.8 1.2 1.2 2.5 1.2 4.9Z"/></svg>Fórum</a></li>
+        <li><a href="perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Meu Perfil</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-primary">Entrar / Criar conta</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== INTRODUÇÃO DA PÁGINA ===================== -->
+    <section class="page-intro">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Início</a> / Plano de Estudos</p>
+        <span class="hero-eyebrow">ORGANIZE SUA SEMANA</span>
+        <h1>Plano de Estudos</h1>
+        <p class="lead">
+          Distribua as áreas do Enem ao longo da semana e marque o que já foi estudado.
+          Seu plano fica salvo por aqui, sempre à mão.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: var(--space-lg);">
+      <div class="container">
+        <div class="enem-layout">
+
+          <!-- ===================== GRADE SEMANAL ===================== -->
+          <div>
+            <div class="week-grid" id="plano-semana">
+
+              <div class="week-day" data-dia="segunda">
+                <span class="week-day-name">Segunda-feira</span>
+                <span class="badge badge-neutral">Linguagens</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Revisar interpretação de texto</li>
+                  <li class="task-item"><input type="checkbox" disabled> 10 questões de literatura</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="terca">
+                <span class="week-day-name">Terça-feira</span>
+                <span class="badge badge-neutral">Matemática</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Funções e gráficos</li>
+                  <li class="task-item"><input type="checkbox" disabled> 15 questões de matemática básica</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="quarta">
+                <span class="week-day-name">Quarta-feira</span>
+                <span class="badge badge-neutral">Ciências Humanas</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Brasil República — linha do tempo</li>
+                  <li class="task-item"><input type="checkbox" disabled> 10 questões de história</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="quinta">
+                <span class="week-day-name">Quinta-feira</span>
+                <span class="badge badge-neutral">Ciências da Natureza</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Leis de Newton</li>
+                  <li class="task-item"><input type="checkbox" disabled> 10 questões de física</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="sexta">
+                <span class="week-day-name">Sexta-feira</span>
+                <span class="badge badge-neutral">Redação</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Escrever uma redação completa</li>
+                  <li class="task-item"><input type="checkbox" disabled> Revisar competência 4 (coesão)</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="sabado">
+                <span class="week-day-name">Sábado</span>
+                <span class="badge badge-neutral">Revisão geral</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Refazer questões erradas da semana</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+              <div class="week-day" data-dia="domingo">
+                <span class="week-day-name">Domingo</span>
+                <span class="badge badge-neutral">Simulado</span>
+                <ul class="task-list">
+                  <li class="task-item"><input type="checkbox" disabled> Resolver um dia de prova antiga</li>
+                </ul>
+                <button type="button" class="week-day-add">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar tarefa
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===================== BARRA LATERAL ===================== -->
+          <aside class="enem-sidebar">
+            <div class="stat-card enem-sidebar-card">
+              <h4>Seu progresso esta semana</h4>
+              <span class="stat-value" style="font-size: 1.6rem;">0<small> / 11 tarefas</small></span>
+              <div class="progress-bar" style="margin-top: var(--space-sm);"><span style="width: 0%;"></span></div>
+            </div>
+
+            <div class="stat-card enem-sidebar-card">
+              <h4>Próximas datas</h4>
+              <ul class="sidebar-dates">
+                <li><span>Inscrições do Enem</span><strong>ago/2026</strong></li>
+                <li><span>1º dia de prova</span><strong>8 nov 2026</strong></li>
+                <li><span>2º dia de prova</span><strong>15 nov 2026</strong></li>
+              </ul>
+            </div>
+
+            <a href="#" class="btn btn-outline" style="width: 100%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M12 5v14M5 12h14"/></svg>
+              Novo plano de estudos
+            </a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" style="color:var(--white)">
+            <span class="brand-mark"><img src="../assets/logo/logo-rc-160.png" alt="" width="30" height="30"></span>
+            <span class="brand-text">
+              <span class="brand-eyebrow" style="color:#7E97C9">Preparação ENEM</span>
+              <span class="brand-name" style="color:var(--white)">Rui Conecti<span class="brand-dot">.</span></span>
+            </span>
+          </a>
+          <p>Plataforma educacional brasileira de apoio à preparação para o ENEM.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Estudar</h4>
+          <ul>
+            <li><a href="enem.html">Sobre o ENEM</a></li>
+            <li><a href="questoes.html">Banco de Questões</a></li>
+            <li><a href="provas.html">Provas Antigas para Resolver</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acompanhar</h4>
+          <ul>
+            <li><a href="tri.html">Minha TRI</a></li>
+            <li><a href="estudos.html">Plano de Estudos</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="forum.html">Fórum</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Entrar / Criar conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Rui Conecti. Plataforma educacional independente, sem vínculo oficial com o INEP.</span>
+        <span>Feito para estudantes brasileiros.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
